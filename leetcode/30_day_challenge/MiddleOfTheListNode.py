@@ -8,11 +8,10 @@ class Solution:
     def middleNode(self, head: ListNode) -> ListNode:
         slowptr = head
         fastptr = head
-        if head != None:
-            while(fastptr is not None and fastptr.next is not None):
-                fastptr = fastptr.next.next
-                slowptr = slowptr.next
-            return slowptr
+        while(fastptr and fastptr.next):
+            fastptr = fastptr.next.next
+            slowptr = slowptr.next
+        return slowptr.val
             
 print(Solution().middleNode(ListNode([1,2,3,4,5,6])))
 
