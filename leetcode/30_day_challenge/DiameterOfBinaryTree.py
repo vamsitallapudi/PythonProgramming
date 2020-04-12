@@ -21,6 +21,3 @@ class Solution:
         return max(left,right)+1
 
 
-Solution.diameterOfBinaryTree([1,2,3,4])
-
-
