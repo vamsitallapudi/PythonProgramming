@@ -8,16 +8,16 @@ class TreeNode:
 class Solution:
 
     def diameterOfBinaryTree(self, root: TreeNode) -> int:
-        self.globalLongestPath = 0
+        self.longestPath = 0
         self.depth(root)
-        return self.globalLongestPath
+        return self.longestPath
 
     def depth(self, node:TreeNode)-> int:
         if not node:
             return 0
         left = self.depth(node.left)
         right = self.depth(node.right)
-        self.globalLongestPath = max(self.globalLongestPath, left + right)
+        self.longestPath = max(self.longestPath, left + right)
         return max(left,right)+1
 
 
