@@ -1,16 +1,18 @@
-from typing import List
+import functools
 
 class Solution:
-
     def longestCommonSubsequence(self, text1: str, text2: str) -> int:
-        return self.lcs(0, 0, list(text1), list(text2))
+        arr1 = list(text1)
+        arr2 = list(text2)
 
-    def lcs(self, i, j, arr1: List, arr2: List):
-        if i == len(arr1) or j == len(arr2):
-            return 0
-        elif arr1[i] == arr2[j]:
-            return 1 + self.lcs(i + 1, j + 1, arr1, arr2)
-        else:
-            return max(self.lcs(i+1, j, arr1, arr2), self.lcs(i, j+1, arr1, arr2))
+        @functools.lru_cache(None)
+        def helper(i, j):
+            if i == len(arr1) or j == len(arr2):
+                return 0
+            elif arr1[i] == arr2[j]:
+                return 1 + helper(i + 1, j + 1)
+            else:
+                return max(helper(i+1, j), helper(i, j+1))
+        return helper(0, 0)
 
 print(Solution().longestCommonSubsequence("bd", "abcd"))
