@@ -6,5 +6,4 @@ class Solution:
                 count += 1
         return count
 
-
-print(Solution().numJewelsInStones("aA", "aAAbbbb"))
+# print(Solution().numJewelsInStones("aA", "aAAbbbb"))
