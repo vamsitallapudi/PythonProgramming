@@ -7,4 +7,4 @@ class Solution:
         return sorted(nums)[len(nums)//2]
 
 
-print(Solution().majorityElement([6,6,6,7,7]))
+print(Solution().majorityElement([6, 6, 6, 7, 7]))
