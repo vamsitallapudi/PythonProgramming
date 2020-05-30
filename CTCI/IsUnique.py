@@ -13,5 +13,3 @@ class IsUnique:
         return True
 
 print(IsUnique().checkUnique("testing"))
-
-
