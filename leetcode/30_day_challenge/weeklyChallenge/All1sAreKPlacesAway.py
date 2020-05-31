@@ -16,4 +16,5 @@ class Solution:
                 count += 1
         return is_length_apart
 
-print(Solution().kLengthApart([1,0,1,1,0,1,0],3))
+
+print(Solution().kLengthApart([1, 0, 1, 1, 0, 1, 0], 3))
