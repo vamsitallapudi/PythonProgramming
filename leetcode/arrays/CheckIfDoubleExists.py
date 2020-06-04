@@ -7,14 +7,10 @@ class Solution:
             return False
         a = []
         for i in range(0, len(arr)):
-            if arr[i] % 2 == 0:
-                if arr[i] * 2 in a or arr[i] / 2 in a:
-                    return True
-            else:
-                if arr[i] * 2 in a:
-                    return True
+            if arr[i] * 2 in a or arr[i] % 2 == 0 and arr[i] / 2 in a:
+                return True
             a.append(arr[i])
         return False
 
 
-print(Solution().checkIfExist([1, 4]))
+print(Solution().checkIfExist([1, 2]))
