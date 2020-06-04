@@ -5,13 +5,16 @@ class Solution:
     def checkIfExist(self, arr: List[int]) -> bool:
         if not arr:
             return False
-
+        a = []
         for i in range(0, len(arr)):
-            req = arr[i] / 2
-            for j in range(0, len(arr)):
-                if j != i and arr[j] == req:
+            if arr[i] % 2 == 0:
+                if arr[i] * 2 in a or arr[i] / 2 in a:
                     return True
+            else:
+                if arr[i] * 2 in a:
+                    return True
+            a.append(arr[i])
         return False
 
 
-print(Solution().checkIfExist([3,1,7,11]))
+print(Solution().checkIfExist([1, 4]))
