@@ -3,16 +3,12 @@ from typing import List
 
 class Solution:
     def replaceElements(self, arr: List[int]) -> List[int]:
-        if not arr:
-            return []
-        n = len(arr)
-        max_val = arr[n - 1]
-        for i in range(n - 2, -1, -1):
-            arr[i] = max(arr[i], max_val)
-            max_val = arr[i]
-        arr.append(-1)
-        arr.pop(0)
+        maxVal = -1
+        for i in range(len(arr) - 1, -1, -1):
+            temp = arr[i]
+            arr[i] = maxVal
+            maxVal = max(maxVal, temp)
         return arr
 
 
-print(Solution().replaceElements([1]))
+print(Solution().replaceElements([17, 18, 5, 4, 6, 1]))
