@@ -18,10 +18,7 @@ def delete_at_start(head):
     # edge case: return if head is null
     if not head:
         return None
-
-    temp = head  # creating temp pointer and pointing to head node
     head = head.next  # moving head to next node
-    temp = None  # making temp as null
     return head
 
 
@@ -30,14 +27,32 @@ def delete_at_start(head):
 """
 
 
-def delete_at_end(head: Node):
+def delete_at_end(head):
     if not head:
         return None
 
     prev_node = head
-    while prev_node.next.next is not None:
+    while prev_node.next.next:
         prev_node = prev_node.next
     prev_node.next = None
+    return head
+
+
+def delete_at_pos(head, position):
+    if not head:
+        return None
+
+    if position is 0:
+        return head.next
+
+    prev_node = head
+    curr_node = head.next
+    current_pos = 1
+    while curr_node and current_pos < position:
+        current_pos += 1
+        prev_node = prev_node.next
+        curr_node = curr_node.next
+    prev_node.next = curr_node.next
     return head
 
 
@@ -60,6 +75,9 @@ if __name__ == '__main__':
     head = insert(head, 11)
     head = insert(head, 23)
     head = insert(head, 8)
+
+    # delete at a given position
+    head = delete_at_pos(head, 2)
 
     # deleting a node at start
     head = delete_at_start(head)
