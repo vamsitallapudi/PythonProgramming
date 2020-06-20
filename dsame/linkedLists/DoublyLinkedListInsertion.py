@@ -5,11 +5,6 @@ class Node:
         self.next = next
 
 
-class LinkedList:
-    def __init__(self, head: Node):
-        self.head = head
-
-
 def insert_at_start(head, data):
     # creating a new node and put data in it
     new_node = Node(data=data)
