@@ -47,13 +47,13 @@ class CircularLinkedList:
 
 
 if __name__ == "__main__":
-    head = None
     cll = CircularLinkedList()
-    head = cll.insert_at_start(head, 3)
-    head = cll.insert_at_start(head, 2)
-    head = cll.insert_at_start(head, 1)
+    cll.head = cll.insert_at_start(cll.head, 3)
+    cll.head = cll.insert_at_start(cll.head, 2)
+    cll.head = cll.insert_at_start(cll.head, 1)
 
-    curr = head
+    curr = cll.head
     curr = print_and_iterate(curr)
-    while curr != head:
+    while curr != cll.head:
         curr = print_and_iterate(curr)
+

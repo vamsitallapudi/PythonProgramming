@@ -12,7 +12,7 @@ class CLL:
         self.head = head
 
     def delete_at_end(self, head):
-        if not head or not head.next:
+        if not head or head.next is head:
             return None
 
         previous, current = head, head.next
@@ -23,7 +23,7 @@ class CLL:
         return head
 
     def delete_at_start(self, head):
-        if not head or not head.next:
+        if not head or head.next is head:
             return None
 
         current = head
@@ -51,15 +51,14 @@ class CLL:
 
 
 if __name__ == "__main__":
-    head = None
-    cll = CLL(head)
-    head = cll.insert_at_start(head, 3)
-    head = cll.insert_at_start(head, 2)
-    head = cll.insert_at_start(head, 1)
-    head = cll.delete_at_start(head)
-    head = cll.delete_at_end(head)
+    cll = CLL()
+    cll.head = cll.insert_at_start(cll.head, 3)
+    cll.head = cll.insert_at_start(cll.head, 2)
+    cll.head = cll.insert_at_start(cll.head, 1)
+    cll.head = cll.delete_at_start(cll.head)
+    cll.head = cll.delete_at_end(cll.head)
 
-    curr = head
+    curr = cll.head
     curr = print_and_iterate(curr)
-    while curr != head:
+    while curr != cll.head:
         curr = print_and_iterate(curr)
