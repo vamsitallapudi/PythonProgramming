@@ -1,3 +1,6 @@
+from dsame.linkedLists.circularLinkedLists.Common import print_and_iterate
+
+
 class CLLNode:
     def __init__(self, data=None, next=None):
         self.data = data
@@ -47,12 +50,6 @@ class CLL:
         return head
 
 
-def print_and_iterate():
-    global curr
-    print("{}".format(curr.data), end=" ")
-    curr = curr.next
-
-
 if __name__ == "__main__":
     head = None
     cll = CLL(head)
@@ -63,6 +60,6 @@ if __name__ == "__main__":
     head = cll.delete_at_end(head)
 
     curr = head
-    print_and_iterate()
+    curr = print_and_iterate(curr)
     while curr != head:
-        print_and_iterate()
+        curr = print_and_iterate(curr)
