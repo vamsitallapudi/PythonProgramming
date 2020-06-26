@@ -2,13 +2,6 @@ class Node:
     def __init__(self, data=None):
         self.data = data
         self.next = None
-
-
-class SinglyLinkedList:
-    def __init__(self):
-        self.head = None
-
-
 """
  Deleting a node at start. 
 """
@@ -28,23 +21,28 @@ def delete_at_start(head):
 
 
 def delete_at_end(head):
+    # edge case
     if not head:
         return None
 
     prev_node = head
+    # traversing until current node's next is null
     while prev_node.next.next:
         prev_node = prev_node.next
+    # deleting the reference of previous node's next
     prev_node.next = None
     return head
 
 
 def delete_at_pos(head, position):
+    # edge case
     if not head:
         return None
 
     if position is 0:
         return head.next
 
+    # maintaining previous and current nodes
     prev_node = head
     curr_node = head.next
     current_pos = 1
@@ -70,11 +68,11 @@ if __name__ == '__main__':
     # start with empty list
     head = None
 
-    head = insert(head, 12)
-    head = insert(head, 29)
-    head = insert(head, 11)
-    head = insert(head, 23)
-    head = insert(head, 8)
+    head = insert(head, 5)
+    head = insert(head, 4)
+    head = insert(head, 3)
+    head = insert(head, 2)
+    head = insert(head, 1)
 
     # delete at a given position
     head = delete_at_pos(head, 2)
