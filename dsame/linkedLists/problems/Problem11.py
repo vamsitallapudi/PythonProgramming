@@ -1,5 +1,7 @@
-# Check whether the given linked list is null terminated or not. If it is, find the starting node of the loop.
-from dsame.linkedLists.problems.Problem9 import is_looped_linked_list
+"""
+Check whether the given linked list is null terminated or not.
+If it is, find the starting node of the loop.
+"""
 
 
 def find_starting_node_of_loop(head):
