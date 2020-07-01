@@ -5,8 +5,8 @@ class Node:
 
 
 class BaseLinkedList:
-    def __init__(self):
-        self.head = None
+    def __init__(self, head=None):
+        self.head = head
 
     # code to append / insert at end
     def insert_at_end(self, head, data):
@@ -28,16 +28,18 @@ class BaseLinkedList:
         new_node.prev = current
         return head
 
-
     def initializebll(self, bll):
         for i in range(1, 7):
             self.head = bll.insert_at_end(self.head, i)
         return self.head
 
+    def print_data(self, head):
+        while head:
+            print(head.data, end=" ")
+            head = head.next
+
 
 if __name__ == '__main__':
     bll = BaseLinkedList()
     head = bll.initializebll(bll)
-    while head:
-        print(head.data, end=" ")
-        head = head.next
+    bll.print_data(head)
