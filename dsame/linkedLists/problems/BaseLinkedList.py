@@ -12,20 +12,13 @@ class BaseLinkedList:
     def insert_at_end(self, head, data):
         # creating a new node and put data in it
         new_node = Node(data=data)
+        while not head:
+            return new_node
         current = head
-
-        # if Linked List is empty, make new node as head
-        if not head:
-            head = new_node
-            return head
-
-        # traversing till end
-        while current.next:
+        while current and current.next:  # traversing till the last node
             current = current.next
-        # pointing the last node's next to new node
+        # change the next of last node
         current.next = new_node
-        # pointing new node's previous
-        new_node.prev = current
         return head
 
     def initializebll(self, bll):
