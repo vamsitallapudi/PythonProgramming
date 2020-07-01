@@ -1,5 +1,6 @@
 from dsame.linkedLists.problems.BaseLinkedList import BaseLinkedList
 
+# reversing linked list iterative version
 
 def reverse_linked_list(head):
     # iterative version
