@@ -1,17 +1,22 @@
 from dsame.linkedLists.problems.BaseLinkedList import BaseLinkedList
 
 
-def recursive_reverse(head):
+def recursive_reverse(first):
     # if no elements in head
-    if not head:
+    if not first:
         return None
-    if not head.next:
-        return head
-    second_ele = head.next
-    head.next = None
-    reverse_rest = recursive_reverse(second_ele)
-    second_ele.next = head
-    return reverse_rest
+    if not first.next:
+        return first
+    # taking two elements every time, first and second
+    second_ele = first.next
+    # pointing first element to Null
+    first.next = None
+    # place where recursion happens if next elements are there
+    reversed_part = recursive_reverse(second_ele)
+    # pointing second element's next to first
+    second_ele.next = first
+    # returning the chain of reversed part
+    return reversed_part
 
 
 if __name__ == '__main__':
