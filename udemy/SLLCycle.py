@@ -3,6 +3,7 @@ class Node:
         self.value = value
         self.nextnode = None
 
+
 def cycle_check(node):
     if not node:
         return False
@@ -14,16 +15,15 @@ def cycle_check(node):
         node = node.nextnode
     return False
 
-if __name__ == '__main__':
 
+if __name__ == '__main__':
     # CREATE CYCLE LIST
     a = Node(1)
     b = Node(2)
     c = Node(3)
     a.nextnode = b
     b.nextnode = c
-    c.nextnode = a # Cycle Here!
-
+    c.nextnode = a  # Cycle Here!
 
     # CREATE NON CYCLE LIST
     x = Node(1)
