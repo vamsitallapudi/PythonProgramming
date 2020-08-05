@@ -7,7 +7,7 @@ class ListNode:
 
 
 class Solution:
-    def getIntersectionNode(self, headA: ListNode, headB: ListNode):
+    def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> ListNode:
         #         finding length of both the lls
         nodeA, nodeB = headA, headB
         len1, len2 = 0, 0
@@ -31,13 +31,10 @@ class Solution:
         for i in range(diff):
             nodeA = nodeA.next
 
-        while nodeA and nodeB:
-            if nodeA == nodeB:
-                return nodeA
+        while nodeA != nodeB:
             nodeA = nodeA.next
             nodeB = nodeB.next
-
-        return None
+        return nodeA
 
 
 if __name__ == "__main__":
