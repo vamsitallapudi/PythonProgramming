@@ -17,7 +17,7 @@ class Solution:
                 curr.next = curr.next.next
             else:
                 curr = curr.next
-        return head
+        return dummy.next
 
 if __name__ == "__main__":
     a = ListNode(1)
