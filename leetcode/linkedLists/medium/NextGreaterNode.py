@@ -13,6 +13,7 @@ class ListNode:
         self.val = x
         self.next = None
 
+
 class Solution:
     def nextLargerNodes(self, head: ListNode) -> List[int]:
         position = -1
@@ -28,6 +29,7 @@ class Solution:
             stack.append((position, head.val))
             head = head.next
         return ans
+
 
 if __name__ == "__main__":
     a = ListNode(1)
