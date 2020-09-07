@@ -17,16 +17,18 @@ class ListNode:
 class Solution:
     def nextLargerNodes(self, head: ListNode) -> List[int]:
         position = -1
-        stack, ans = [], []
+        stack, ans = [], []  # declaring empty lists
 
         while head:
             position += 1
             ans.append(0)
+            # checking the top item of stack. Here -1 represents top most item
+            # and 1 represent the tuple's second item, i.e. value
             while stack and stack[-1][1] < head.val:
-                index, value = stack.pop()
-                ans[index] = head.val
+                index, value = stack.pop()  # popping the top item of the stack
+                ans[index] = head.val  # appending the value to our answer list
 
-            stack.append((position, head.val))
+            stack.append((position, head.val))  # adding a tuple to the stack
             head = head.next
         return ans
 
