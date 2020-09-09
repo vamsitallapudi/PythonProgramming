@@ -13,13 +13,9 @@ class Solution:
         count = 0
 
         while head:
-            if head.val in g:
-                if head.next and head.next.val in g:
-                    head = head.next
-                    continue
+            if head.val in g and (head.next is None or head.next.val not in g):
                 count += 1
             head = head.next
-
         return count
 
 
