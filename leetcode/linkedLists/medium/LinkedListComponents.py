@@ -19,16 +19,19 @@ class Solution:
         return count
 
 
-if __name__ == "__main__":
+def initializeLinkedList():
     a = ListNode(0)
     b = ListNode(1)
     c = ListNode(2)
     d = ListNode(3)
     e = ListNode(4)
-
     a.next = b
     b.next = c
     c.next = d
     d.next = e
+    return a
 
+
+if __name__ == "__main__":
+    initializeLinkedList()
     print(Solution().numComponents(a, [0, 3, 1, 4]))
