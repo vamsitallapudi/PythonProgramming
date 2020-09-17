@@ -39,23 +39,23 @@ def initializeLinkedListWith11():
     c = ListNode(2)
     d = ListNode(3)
     e = ListNode(4)
-    f = ListNode(5)
-    g = ListNode(6)
-    h = ListNode(7)
-    i = ListNode(8)
-    j = ListNode(9)
-    k = ListNode(10)
+    # f = ListNode(5)
+    # g = ListNode(6)
+    # h = ListNode(7)
+    # i = ListNode(8)
+    # j = ListNode(9)
+    # k = ListNode(10)
 
     a.next = b
     b.next = c
     c.next = d
     d.next = e
-    e.next = f
-    f.next = g
-    g.next = h
-    h.next = i
-    i.next = j
-    j.next = k
+    # e.next = f
+    # f.next = g
+    # g.next = h
+    # h.next = i
+    # i.next = j
+    # j.next = k
 
     return a
 
