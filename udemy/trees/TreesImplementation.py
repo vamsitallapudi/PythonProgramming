@@ -31,3 +31,25 @@ class BinaryTree(object):
 
     def getRootVal(self):
         return self.key
+
+
+def preOrder(tree: BinaryTree):
+    if tree:
+        print(tree.getRootVal())
+        preOrder(tree.leftChild)
+        preOrder(tree.rightChild)
+
+
+def postOrder(tree: BinaryTree):
+    if tree:
+        preOrder(tree.leftChild)
+        preOrder(tree.rightChild)
+        print(tree.getRootVal())
+
+
+def inOrder(tree: BinaryTree):
+    if tree:
+        preOrder(tree.leftChild)
+        print(tree.getRootVal())
+        preOrder(tree.rightChild)
+
