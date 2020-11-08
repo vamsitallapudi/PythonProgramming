@@ -1,4 +1,4 @@
-from dsame.trees.BinaryTreeNode import BinaryTreeNode
+from dsame.trees.BinaryTreeNode import BinaryTreeNode, initializeBinaryTree
 
 
 def preOrderNonRecursive(root: BinaryTreeNode):
@@ -18,8 +18,4 @@ def preOrderNonRecursive(root: BinaryTreeNode):
         root = root.right
 
 
-a = BinaryTreeNode(2)
-b = BinaryTreeNode(3)
-c = BinaryTreeNode(1, a, b)
-
-print(preOrderNonRecursive(c))
+print(preOrderNonRecursive(initializeBinaryTree()))
