@@ -1,33 +1,28 @@
-from dsame.trees.BinaryTreeNode import BinaryTreeNode
+from dsame.trees.BinaryTreeNode import *
 
 
 # as it is a binary tree, we can insert wherever we want
 
 def insertElement(ele, root: BinaryTreeNode):
-    values = []
-    newNode = BinaryTreeNode(ele)
-
     if not root:
-        return newNode
+        return root
 
-    values.append(root)
-    while len(values):
-        temp = values.pop()
+    stack = [root]
+    newNode = BinaryTreeNode(data=ele)
+
+    while len(stack):
+        temp = stack.pop()
 
         if temp.left:
-            values.append(temp.left)
+            stack.append(temp.left)
         else:
             temp.left = newNode
-            return
+            return root
         if temp.right:
-            values.append(temp.right)
+            stack.append(temp.right)
         else:
             temp.right = newNode
-            return
+            return root
 
 
-a = BinaryTreeNode(1)
-b = BinaryTreeNode(2)
-c = BinaryTreeNode(3, a, b)
-print(insertElement(4, c))
-print(insertElement(5, c))
+printBinaryTree(insertElement(5, initializeBinaryTree()))
