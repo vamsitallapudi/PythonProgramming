@@ -1,4 +1,4 @@
-from dsame.trees.BinaryTreeNode import BinaryTreeNode
+from dsame.trees.BinaryTreeNode import *
 
 
 def maxEle(root: BinaryTreeNode) -> BinaryTreeNode:
@@ -7,18 +7,8 @@ def maxEle(root: BinaryTreeNode) -> BinaryTreeNode:
         root_val = root.data
         left = maxEle(root.left)
         right = maxEle(root.right)
-        if left > right:
-            maximum = left
-        else:
-            maximum = right
-
-        if root_val > maximum:
-            maximum = root_val
+        maximum = max(left, right, root_val)
     return maximum
 
 
-a = BinaryTreeNode(1)
-b = BinaryTreeNode(2)
-c = BinaryTreeNode(3, a, b)
-
-print(maxEle(c))
+print(maxEle(initializeBinaryTree()))
