@@ -10,3 +10,13 @@ def initializeBinaryTree() -> BinaryTreeNode:
     b = BinaryTreeNode(3)
     c = BinaryTreeNode(1, a, b)
     return c
+
+
+def printBinaryTree(root):
+    if not root:
+        return
+    print(root.data)
+    if root.left:
+        printBinaryTree(root.left)
+    if root.right:
+        printBinaryTree(root.right)
