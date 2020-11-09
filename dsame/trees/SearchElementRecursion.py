@@ -1,4 +1,4 @@
-from dsame.trees.BinaryTreeNode import BinaryTreeNode
+from dsame.trees.BinaryTreeNode import *
 
 
 def search_element(ele, root: BinaryTreeNode):
@@ -14,8 +14,4 @@ def search_element(ele, root: BinaryTreeNode):
         return search_element(ele, root.right)
 
 
-a = BinaryTreeNode(5)
-b = BinaryTreeNode(2)
-c = BinaryTreeNode(3, a, b)
-print(search_element(4, c))
-print(search_element(5, c))
+print(search_element(4, initializeBinaryTree()))
