@@ -12,6 +12,15 @@ def initializeBinaryTree() -> BinaryTreeNode:
     return c
 
 
+def initializeBinaryTreeWithTwoLevels() -> BinaryTreeNode:
+    d = BinaryTreeNode(5)
+    e = BinaryTreeNode(6)
+    a = BinaryTreeNode(2, d, e)
+    b = BinaryTreeNode(3)
+    c = BinaryTreeNode(1, a, b)
+    return c
+
+
 def printBinaryTree(root):
     if not root:
         return
