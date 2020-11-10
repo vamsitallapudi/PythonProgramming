@@ -6,14 +6,14 @@ def height_of_bin_tree_iterative(root: BinaryTreeNode):
         return 0
 
     queue = [root, None]
-    level = 0
+    level = 1
     while len(queue):
         temp = queue.pop(0)
 
         if not temp:
-            level += 1
             if len(queue):
                 queue.append(None)
+                level += 1
 
         else:
             if temp.left:
