@@ -12,12 +12,25 @@ def initializeBinaryTree() -> BinaryTreeNode:
     return c
 
 
+def initializeBinaryTreeWithHalfNode() -> BinaryTreeNode:
+    a = BinaryTreeNode(2)
+    c = BinaryTreeNode(1, a)
+    return c
+
+
 def initializeBinaryTreeWithTwoLevels() -> BinaryTreeNode:
     d = BinaryTreeNode(5)
     e = BinaryTreeNode(6)
     a = BinaryTreeNode(2, d, e)
     b = BinaryTreeNode(3)
     c = BinaryTreeNode(1, a, b)
+    return c
+
+
+def initializeBinaryTreeWithTwoLevelsWithHalfNodes() -> BinaryTreeNode:
+    b = BinaryTreeNode(5)
+    a = BinaryTreeNode(2, b)
+    c = BinaryTreeNode(1, a)
     return c
 
 
