@@ -18,4 +18,5 @@ def count_full_nodes_iter(root: BinaryTreeNode):
 
     return count
 
+
 print(count_full_nodes_iter(initializeBinaryTreeWithTwoLevels()))
