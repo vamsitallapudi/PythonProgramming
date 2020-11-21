@@ -12,6 +12,13 @@ def initializeBinaryTree() -> BinaryTreeNode:
     return c
 
 
+def initializeBinaryTreeMirror() -> BinaryTreeNode:
+    a = BinaryTreeNode(3)
+    b = BinaryTreeNode(2)
+    c = BinaryTreeNode(1, a, b)
+    return c
+
+
 def initializeBinaryTreeWithHalfNode() -> BinaryTreeNode:
     a = BinaryTreeNode(2)
     c = BinaryTreeNode(1, a)
