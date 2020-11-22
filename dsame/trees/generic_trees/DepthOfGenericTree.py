@@ -1,6 +1,3 @@
-from dsame.trees.common.GenericBinaryTree import *
-
-
 def depth_of_generic_tree(arr: list):
     currDepth, maxDepth = 0, 0
     for i in range(0, len(arr)):
