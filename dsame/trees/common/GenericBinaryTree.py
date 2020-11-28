@@ -18,5 +18,5 @@ def initializeGenericTreeForSiblings() -> GenericTreeNode:
     c = GenericTreeNode(4)
     d = GenericTreeNode(5)
     a = GenericTreeNode(3, firstChild=c, nextSibling=d)
-    b = GenericTreeNode(2, nextSibling=a)
+    b = GenericTreeNode(2, firstChild=a)
     return b
