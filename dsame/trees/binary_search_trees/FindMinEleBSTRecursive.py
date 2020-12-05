@@ -10,4 +10,4 @@ def find_min_recursive(root: BinarySearchTreeNode):
         return find_min_recursive(root.left)
 
 
-print(find_min_recursive(initializeBST()).data)
+print(find_min_recursive(initialize_BST()).data)

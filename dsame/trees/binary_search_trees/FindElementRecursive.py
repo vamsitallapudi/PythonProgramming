@@ -11,4 +11,4 @@ def find_element_recursive(element, root: BinarySearchTreeNode) -> BinarySearchT
     return root
 
 
-print(find_element_recursive(6, initializeBST()))
+print(find_element_recursive(6, initialize_BST()))

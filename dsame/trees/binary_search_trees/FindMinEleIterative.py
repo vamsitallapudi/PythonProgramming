@@ -10,4 +10,4 @@ def find_min_iterative(root: BinarySearchTreeNode):
     return root
 
 
-print(find_min_iterative(initializeBST()).data)
+print(find_min_iterative(initialize_BST()).data)

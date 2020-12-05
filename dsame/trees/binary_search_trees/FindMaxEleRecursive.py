@@ -11,4 +11,4 @@ def find_max_ele_recursive(root: BinarySearchTreeNode):
         return find_max_ele_recursive(root.right)
 
 
-print(find_max_ele_recursive(initializeBST()).data)
+print(find_max_ele_recursive(initialize_BST()).data)

@@ -9,4 +9,4 @@ def find_max_ele_iter(root: BinarySearchTreeNode):
     return root
 
 
-print(find_max_ele_iter(initializeBST()).data)
+print(find_max_ele_iter(initialize_BST()).data)
