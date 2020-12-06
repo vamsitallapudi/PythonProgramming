@@ -14,4 +14,4 @@ def insert_ele_recursive(root: BinarySearchTreeNode, data: int):
     return root
 
 
-print_BST(insert_ele_recursive(initialize_BST(), 10))
+print_inorder_BST(insert_ele_recursive(initialize_BST(), 10))
