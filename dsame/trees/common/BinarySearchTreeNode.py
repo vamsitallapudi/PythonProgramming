@@ -46,3 +46,26 @@ def create_BST():
     root = insert(root, 80)
     root = insert(root, 70)
     return root
+
+
+def create_BST_Two():
+    """ creating the following BST
+                  4
+               /     \
+              2       8
+                     /  \
+                    5   10
+                     \
+                      7
+                    /
+                   6
+    """
+
+    root = BinarySearchTreeNode(4)
+    root = insert(root, 2)
+    root = insert(root, 8)
+    root = insert(root, 5)
+    root = insert(root, 10)
+    root = insert(root, 7)
+    root = insert(root, 6)
+    return root
